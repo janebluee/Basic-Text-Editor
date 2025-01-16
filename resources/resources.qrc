@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RCC>
+    <qresource prefix="/">
+        <file>icons/new.png</file>
+        <file>icons/open.png</file>
+        <file>icons/save.png</file>
+        <file>icons/cut.png</file>
+        <file>icons/copy.png</file>
+        <file>icons/paste.png</file>
+        <file>icons/find.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,35 @@
+#include "src/resource.h"
+#include <windows.h>
+
+IDR_MAINMENU MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N", ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O", ID_FILE_OPEN
+        MENUITEM "&Save\tCtrl+S", ID_FILE_SAVE
+        MENUITEM "Save &As...", ID_FILE_SAVEAS
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit", ID_FILE_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "Cu&t\tCtrl+X", ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C", ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V", ID_EDIT_PASTE
+        MENUITEM SEPARATOR
+        MENUITEM "&Find\tCtrl+F", ID_EDIT_FIND
+    END
+END
+
+IDD_FIND_DIALOG DIALOG 0, 0, 200, 70
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Find"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT "Find what:", -1, 7, 9, 50, 8
+    EDITTEXT IDC_FIND_TEXT, 60, 7, 130, 12, ES_AUTOHSCROLL | WS_BORDER | WS_TABSTOP
+    AUTOCHECKBOX "Match &case", IDC_MATCH_CASE, 7, 26, 130, 12
+    DEFPUSHBUTTON "Find Next", IDOK, 85, 45, 50, 14, WS_GROUP
+    PUSHBUTTON "Cancel", IDCANCEL, 140, 45, 50, 14
+END
